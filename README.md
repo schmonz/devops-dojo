@@ -1,6 +1,12 @@
 ## Preparation
 
-We provide a pre-cooked Perl/Ruby/whatever program that prints "address labels".
+We provide a pre-cooked Perl/Ruby/whatever program that prints
+"address labels".
+
+Helpful info for preparing our data:
+
+- [Recurring characters from Flying Circus](http://en.wikipedia.org/wiki/List_of_recurring_Monty_Python's_Flying_Circus_characters)
+- [Category: Monty Python characters](http://en.wikipedia.org/wiki/Category:Monty_Python_characters)
 
 ## Start
 
