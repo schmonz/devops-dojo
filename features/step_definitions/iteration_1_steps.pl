@@ -6,8 +6,8 @@ use strict;
 use Test::BDD::Cucumber::StepFile;
 use Test::More;
 
-Given qr/^the comma-separated address (.+)$/, sub {
-	S->{input_address} = $1;
+Given qr/^the comma-separated address$/, sub {
+	S->{input_address} = C->data;
 };
 
 When qr/^it is formatted for display$/, sub {
@@ -22,6 +22,7 @@ Then qr/^it looks like$/, sub {
 
 sub extract_address_parts {
 	my ($input_address) = @_;
+	chomp($input_address);
 	return split(/,/, $input_address);
 }
 

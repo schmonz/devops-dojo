@@ -4,10 +4,13 @@ Feature: Address labels
   So that they'll remember us and maybe impulse-buy something
 
   Scenario: Format labels
-    Given the comma-separated address Phillips,Kevin,Mr.,123 Simple Ct.
+    Given the comma-separated address
+      """
+      Phillips,Kevin,Mr.,123 Simple Ct.
+      """
     When it is formatted for display
     Then it looks like
-"""
-Mr. Kevin Phillips
-123 Simple Ct.
-"""
+      """
+      Mr. Kevin Phillips
+      123 Simple Ct.
+      """
