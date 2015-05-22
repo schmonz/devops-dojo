@@ -7,6 +7,8 @@ Helpful info for preparing our data:
 
 - [Recurring characters from Flying Circus](http://en.wikipedia.org/wiki/List_of_recurring_Monty_Python's_Flying_Circus_characters)
 - [Category: Monty Python characters](http://en.wikipedia.org/wiki/Category:Monty_Python_characters)
+- [Upper Class Twit of the Year](http://en.wikipedia.org/wiki/Upper_Class_Twit_of_the_Year)
+- [Election Night Special](http://en.wikipedia.org/wiki/Election_Night_Special)
 
 ## Start
 
