@@ -3,25 +3,45 @@ Feature: Address labels
   I want to send catalogs to potential customers
   So that they'll remember us and maybe impulse-buy something
 
-  Scenario: Format labels
+  Scenario: Format one label
     Given the comma-separated address
       """
       Baldwin,Michael,Mr.,123 Simple Ct.
       """
     When it is formatted for display
-    Then it looks like
+    Then it should look like
       """
       Mr. Michael Baldwin
       123 Simple Ct.
       """
+    And this line is a dummy so Cucumber can parse this feature
+
+  Scenario: Format several labels
+    Given the comma-separated addresses
+      """
+      Baldwin,Michael,Mr.,123 Simple Ct.
+      Obvious,Ron,Mr.,234 Sample Ln.
+      Gumby,R.J.,Prof.,345 Semple Dr.
+      """
+    When they are formatted for display
+    Then it should look like
+      """
+      Mr. Michael Baldwin
+      123 Simple Ct.
+      
+      Prof. R.J. Gumby
+      345 Semple Dr.
+      
+      Mr. Ron Obvious
+      234 Sample Ln.
+      """
+    And this line is a dummy so Cucumber can parse this feature
 
 # Some Monty Python character names
 # - Ron Obvious
 # - Luigi Vercotti
 # - Reverend Arthur Belling, Vicar of St Loony Up the Cream Bun and Jam
 # - Knights who say Ni
-# - Prof. R.J. Gumby
-# - Michael Baldwin
 # - Harry "Snapper" Organs
 #
 # "Upper Class Twit of the Year"
