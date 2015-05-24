@@ -38,11 +38,12 @@ Feature: Address labels
     And this line is a dummy so Cucumber can parse this feature
 
 # Some Monty Python character names
-# - Ron Obvious
 # - Luigi Vercotti
 # - Reverend Arthur Belling, Vicar of St Loony Up the Cream Bun and Jam
 # - Knights who say Ni
 # - Harry "Snapper" Organs
+# - Raymond Luxury Yacht (pronounced "Throatwobbler Mangrove")
+# - Jean-Brian Zatapathique
 #
 # "Upper Class Twit of the Year"
 # - Vivian Smith-Smythe-Smith
@@ -58,3 +59,9 @@ Feature: Address labels
 # - James Walker (Sensible)
 # - Mr Elsie Zzzzzzzzzzzzzzzip (Silly)
 # - Malcolm Peter Brian Telescope Adrian Umbrella Stand Jasper Wednesday (pops mouth twice) Stoatgobbler John Raw Vegetable (whinnying) Arthur Norman Michael (blows squeaker) Featherstone Smith (whistle) Northcott Edwards Harris (fires pistol, then 'whoop') Mason (chuff-chuff-chuff-chuff) Frampton Jones Fruitbat Gilbert (sings) 'We'll keep a welcome in the' (three shots) Williams If I Could Walk That Way Jenkin (squeaker) Tiger-drawers Pratt Thompson (sings) 'Raindrops Keep Falling On My Head' Darcy Carter (horn) Pussycat (sings) 'Don't Sleep In The Subway' Barton Mainwaring (hoot, 'whoop') Smith (Very Silly)
+#
+# "Dirty Hungarian Phrasebook"
+# - Hungarian name order (but nothing else from this sketch!)
+# - Also there's Spanish name order
+# - Other variations where "last name" wouldn't sort
+# - Other variations where the name otherwise wouldn't print nicely (long?)
