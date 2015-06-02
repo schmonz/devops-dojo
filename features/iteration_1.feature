@@ -37,6 +37,21 @@ Feature: Address labels
       """
     And this line is a dummy so Cucumber can parse this feature
 
+  Scenario: Format several labels from a file
+    Given the CSV file addresses1.csv
+    When they are formatted for display
+    Then it should look like
+      """
+      Mr. Michael Baldwin
+      123 Simple Ct.
+      
+      Prof. R.J. Gumby
+      345 Semple Dr.
+      
+      Mr. Ron Obvious
+      234 Sample Ln.
+      """
+
 # Some Monty Python character names
 # - Luigi Vercotti
 # - Reverend Arthur Belling, Vicar of St Loony Up the Cream Bun and Jam
