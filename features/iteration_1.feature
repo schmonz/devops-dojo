@@ -65,3 +65,6 @@ Feature: Address labels
 # - Also there's Spanish name order
 # - Other variations where "last name" wouldn't sort
 # - Other variations where the name otherwise wouldn't print nicely (long?)
+#
+# Unicode 6 characters (emoji) (accented names?)
+# Han Chinese characters
