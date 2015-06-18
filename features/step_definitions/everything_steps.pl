@@ -13,18 +13,11 @@ Given qr/^the comma-separated address.*$/, sub {
 };
 
 Given qr/^the CSV file (.+)$/, sub {
-	my $filename = $1;
-	my $contents = printlabels::read_file_into_one_big_string($filename);
-
-	S->{input_addresses} = [printlabels::one_address_per_line($contents)];
+	S->{input_addresses} = [printlabels::one_address_per_line_from_file($1)];
 };
 
 When qr/^.+ formatted for display$/, sub {
-	S->{formatted_output} = join(
-		"\n",
-		map { printlabels::format_address(printlabels::extract_address_parts($_)) }
-			@{S->{input_addresses}},
-	);
+	S->{formatted_output} = printlabels::do_all(@{S->{input_addresses}});
 };
 
 Then qr/^it should look like$/, sub {

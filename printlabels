@@ -20,6 +20,12 @@ sub one_address_per_line {
 	return sort split("\n", $as_one_big_string);
 }
 
+sub one_address_per_line_from_file {
+	my ($filename) = @_;
+	my $contents = read_file_into_one_big_string($filename);
+	return one_address_per_line($contents);
+}
+
 sub extract_address_parts {
 	my ($input_address) = @_;
 	chomp($input_address);
@@ -34,10 +40,22 @@ $street
 EOT
 }
 
-sub main {
-	exit(0);
+sub do_all {
+	my (@input_addresses) = @_;
+	return join(
+		"\n",
+		map { printlabels::format_address(
+			printlabels::extract_address_parts($_)
+		) } @input_addresses,
+	);
 }
 
-main() unless caller();
+sub main {
+	my ($filename) = @_;
+	defined $filename
+		&& print do_all(one_address_per_line_from_file($filename));
+}
+
+main(@ARGV) unless caller();
 
 1
