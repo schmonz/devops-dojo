@@ -14,16 +14,9 @@ Given qr/^the comma-separated address.*$/, sub {
 
 Given qr/^the CSV file (.+)$/, sub {
 	my $filename = $1;
-	my $contents;
-	{
-		local $/ = undef;
-		open FILE, $filename or die "Couldn't open file: $!";
-		binmode FILE;
-		$contents = <FILE>;
-		close FILE;
-	}
+	my $contents = printlabels::read_file_into_one_big_string($filename);
 
-	S->{input_addresses} = [ printlabels::one_address_per_line($contents) ];
+	S->{input_addresses} = [printlabels::one_address_per_line($contents)];
 };
 
 When qr/^.+ formatted for display$/, sub {

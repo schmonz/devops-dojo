@@ -5,6 +5,16 @@ use strict;
 
 package printlabels;
 
+sub read_file_into_one_big_string {
+	my ($filename) = @_;
+	local $/ = undef;
+	open FILE, $filename or die "Couldn't open file: $!";
+	binmode FILE;
+	my $contents = <FILE>;
+	close FILE;
+	return $contents;
+}
+
 sub one_address_per_line {
 	my ($as_one_big_string) = @_;
 	return sort split("\n", $as_one_big_string);
@@ -23,5 +33,11 @@ $title $first $last
 $street
 EOT
 }
+
+sub main {
+	exit(0);
+}
+
+main() unless caller();
 
 1
