@@ -1,6 +1,6 @@
 Feature: Address labels
   As a company that sells goods
-  I want to send catalogs to potential customers
+  We want to send catalogs to potential customers
   So that they'll remember us and maybe impulse-buy something
 
   Scenario: Format one label
