@@ -29,13 +29,7 @@ sub one_address_per_line_from_file {
 sub extract_address_parts {
 	my ($input_address) = @_;
 	chomp($input_address);
-	my @address_parts = split(/,/, $input_address);
-	return capitalize_each_word(@address_parts);
-}
-
-sub capitalize_each_word {
-	my (@words) = @_;
-	return map { ucfirst } @words;
+	return split(/,/, $input_address);
 }
 
 sub format_address {

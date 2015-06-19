@@ -16,19 +16,6 @@ Feature: Address labels
       """
     And this line is a dummy so Cucumber can parse this feature
 
-  Scenario: Forcibly capitalize one non-capitalized label
-    Given the comma-separated address
-      """
-      cummings,e.e.,mr.,123 pretty how town street
-      """
-    When it is formatted for display
-    Then it should look like
-      """
-      Mr. E.e. Cummings
-      123 pretty how town street
-      """
-    And this line is a dummy so Cucumber can parse this feature
-
   Scenario: Format several labels
     Given the comma-separated addresses
       """
