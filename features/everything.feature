@@ -16,6 +16,19 @@ Feature: Address labels
       """
     And this line is a dummy so Cucumber can parse this feature
 
+  Scenario: Misformat one very long name label
+    Given the comma-separated address
+      """
+      Peter Brian Telescope Adrian Umbrella Stand Jasper Wednesday Stoatgobbler John Raw Vegetable Arthur Norman Michael Featherstone Smith Northcott Edwards Harris Mason Frampton Jones Fruitbat Gilbert "We'll keep a welcome in the" Williams If I Could Walk That Way Jenkin Tiger-drawers Pratt Thompson "Raindrops Keep Falling On My Head" Darcy Carter Pussycat "Don't Sleep In The Subway" Barton Mainwaring Smith,Malcolm,Mr.,12 St. John-Mollusc Whorl
+      """
+    When it is formatted for display
+    Then it should look like
+      """
+      Mr. Malcolm Peter Brian Telescope Adrian Umbrella Stand Jasper Wednesday Stoatgobbler John Raw Vegetable Arthur Norman Michael Featherstone Smith Northcott Edwards Harris Mason Frampton Jones Fruitbat Gilbert "We'll keep a welcome in the" Williams If I Could Walk That Way Jenkin Tiger-drawers Pratt Thompson "Raindrops Keep Falling On My Head" Darcy Carter Pussycat "Don't Sleep In The Subway" Barton Mainwaring Smith
+      12 St. John-Mollusc Whorl
+      """
+    And this line is a dummy so Cucumber can parse this feature
+
   Scenario: Format CSV entry with unquoted comma
     Given the comma-separated address
       """
