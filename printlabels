@@ -38,10 +38,18 @@ sub capitalize_each_word {
 	return map { ucfirst } @words;
 }
 
+sub wrap_possibly_long_line { 
+	my ($line) = @_;
+	use Text::Wrap;
+	$Text::Wrap::columns = 72;
+	return wrap('', '  ', $line);
+}
+
 sub format_address {
 	my ($last, $first, $title, $street) = @_;
+	my $firstline = wrap_possibly_long_line("$title $first $last");
 	return <<EOT;
-$title $first $last
+$firstline
 $street
 EOT
 }
