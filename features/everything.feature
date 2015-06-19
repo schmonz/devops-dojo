@@ -16,7 +16,7 @@ Feature: Address labels
       """
     And this line is a dummy so Cucumber can parse this feature
 
-  Scenario: Forcibly capitalize one non-capitalized label
+  Scenario: Don't forcibly capitalize one non-capitalized label
     Given the comma-separated address
       """
       cummings,e.e.,mr.,123 pretty how town street
@@ -24,7 +24,7 @@ Feature: Address labels
     When it is formatted for display
     Then it should look like
       """
-      Mr. E.e. Cummings
+      mr. e.e. cummings
       123 pretty how town street
       """
     And this line is a dummy so Cucumber can parse this feature
@@ -51,7 +51,7 @@ Feature: Address labels
     And this line is a dummy so Cucumber can parse this feature
 
   Scenario: Format several labels from a file
-    Given the CSV file addresses1.csv
+    Given the CSV file addresses0.csv
     When they are formatted for display
     Then it should look like
       """
