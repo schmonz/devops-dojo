@@ -29,7 +29,7 @@ sub one_address_per_line_from_file {
 sub extract_address_parts {
 	my ($input_address) = @_;
 	chomp($input_address);
-	my @address_parts = split(/,/, $input_address);
+	my @address_parts = split(/,(?=\S)/, $input_address);
 	return @address_parts;
 }
 

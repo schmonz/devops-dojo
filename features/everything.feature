@@ -16,7 +16,7 @@ Feature: Address labels
       """
     And this line is a dummy so Cucumber can parse this feature
 
-  Scenario: Misformat CSV entry with unquoted comma
+  Scenario: Format CSV entry with unquoted comma
     Given the comma-separated address
       """
       Belling, Vicar of St Loony Up the Cream Bun and Jam,Arthur,Rev.,789 Incubator-Jones Crescent
@@ -24,8 +24,8 @@ Feature: Address labels
     When it is formatted for display
     Then it should look like
       """
-      Arthur  Vicar of St Loony Up the Cream Bun and Jam Belling
-      Rev.
+      Rev. Arthur Belling, Vicar of St Loony Up the Cream Bun and Jam
+      789 Incubator-Jones Crescent
       """
     And this line is a dummy so Cucumber can parse this feature
 
