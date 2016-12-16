@@ -1,54 +1,44 @@
-## Preparation
+# DevOps Dojo
 
-We provide a pre-cooked Perl/Ruby/whatever program that prints
-"address labels".
+This repository supports an interactive workshop created by Lisa Crispin and Amitai Schleier for Agile Roots 2015 (and facilitated by Amitai several times since).
 
-Helpful info for preparing our data:
+If you'd like to use these materials to run your own workshop, you're (1) welcome to and (2) in the right place!
 
-- [Recurring characters from Flying Circus](http://en.wikipedia.org/wiki/List_of_recurring_Monty_Python's_Flying_Circus_characters)
-- [Category: Monty Python characters](http://en.wikipedia.org/wiki/Category:Monty_Python_characters)
-- [Upper Class Twit of the Year](http://en.wikipedia.org/wiki/Upper_Class_Twit_of_the_Year)
-- [Election Night Special](http://en.wikipedia.org/wiki/Election_Night_Special)
 
-## Start
+## The Purpose
 
-Here's some (totally vanilla, but Monty Python-themed) data. Try
-printing the labels. Anyone need help running the program? See how
-it looks when it's working right?
+DevOps is [two things](https://schmonz.com/2016/11/23/automation-for-web-hosting/).
+This workshop does not cover automation. It's about collaboration.
 
-## A new feature
 
-Okay, now the (Monty Python-themed) customer needs a new feature.
-Don't worry, we're not asking you to figure out how to implement
-it. Here (on the big screen) is the change the Devs should type in
-to implement the feature. Devs, does it run and look right to you?
+## The Story
 
-## Ship it
+Our business is an old-school retailer.
+We need to send catalogs to customers.
+So Development developed a program to print address labels.
+When it's time to mail out another batch, Operations operates the program on the latest customer database.
 
-Ops, here's the real data (with new weird kinds of names). Please
-print the labels. Ooooooooops, they don't look right, do they.
+Dev is Dev, and Ops is Ops.
+We don't think there's any point in having them work together.
 
-## Oooops
 
-Devs, you didn't have that data, but you do own this code. Ops, you
-don't own this code, but you did allow it into production. That was
-a waste of company money and could have been worse (damaged our
-reputation...). You're not in trouble, but yeah, you're sort of in
-trouble. Let's not have this happen again.
+## How To Learn To Facilitate
 
-## A new bugfixing
+0. Clone this repo.
+1. Install [`git-crawl`](https://github.com/magnusstahre/git-stuff).
+2. Load these
+   [slides](https://schmonz.com/2016/12/07/agiletd-2016-devops-dojo/slides/).
+3. Press `p` to view my (minimal) presenter notes, including `git` commands
+   to run on a projector for participants to see.
+4. [Ask Amitai](https://twitter.com/schmonz) about anything unclear.
 
-Devs, here are the changes you should type in to fix the formatting
-errors we just saw. Run it on the new data to see that it formats
-correctly. Yeah? Cool.
 
-## Ship it
+## How To Actually Facilitate
 
-Ops, here's some slightly updated data. Please run the labels again.
-Ooooooooooooooooops.
-
-## Ooooops again
-
-Devs, ops, we asked you to not have this happen again, but it did.
-Maybe that's because we didn't change anything about how the work
-works. Should we? What would you suggest we change?
+0. Clone this repo.
+1. Install [`git-crawl`](https://github.com/magnusstahre/git-stuff).
+2. Copy the `.zip` and `.ova` class materials to wherever you share stuff from.
+3. Copy them onto some USB sticks, too.
+4. Write your own slides.
+5. Have fun.
+6. Tell me about it afterward!
